@@ -18,11 +18,12 @@ const getProductFromFile = (cb) => {
 };
 
 module.exports = class Product {
-  constructor(title, img, price, des) {
+  constructor(title, img, price, des, id) {
     this.title = title;
     this.img = img;
     this.price = price;
     this.des = des;
+    this.id = id;
   }
 
   save() {
@@ -41,18 +42,18 @@ module.exports = class Product {
     getProductFromFile(cb);
   }
 
-  static createProduct(data, cb) {
-    const { title, img, price, des } = data;
-    const newProduct = new Product(title, img, price, des);
-    getProductFromFile((products) => {
-      products.push(newProduct);
-      fs.writeFile(p, JSON.stringify(products), (err) => {
-        if (err) {
-          console.log(err);
-          return;
-        }
-        cb(newProduct);
-      });
-    });
-  }
+  // static createProduct(data, cb) {
+  //   const { title, img, price, des } = data;
+  //   const newProduct = new Product(title, img, price, des);
+  //   getProductFromFile((products) => {
+  //     products.push(newProduct);
+  //     fs.writeFile(p, JSON.stringify(products), (err) => {
+  //       if (err) {
+  //         console.log(err);
+  //         return;
+  //       }
+  //       cb(newProduct);
+  //     });
+  //   });
+  // }
 };

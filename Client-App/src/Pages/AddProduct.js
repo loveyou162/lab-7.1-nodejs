@@ -1,6 +1,6 @@
 import classes from "./AddProduct.module.css";
 import { Form, redirect } from "react-router-dom";
-
+import { v4 as uuidv4 } from "uuid";
 const AddProduct = () => {
   return (
     <Form className={classes["product-form"]} method="post">
@@ -38,6 +38,7 @@ export async function action({ request }) {
     img: data.get("img"),
     price: data.get("price"),
     des: data.get("description"),
+    id: uuidv4(),
   };
   console.log(productData);
   let url = "http://localhost:5000/";

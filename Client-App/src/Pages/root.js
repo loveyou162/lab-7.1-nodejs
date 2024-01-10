@@ -1,4 +1,4 @@
-const { Outlet } = require("react-router");
+import { Outlet } from "react-router";
 import NavBar from "../component/header";
 const RootLayout = () => {
   return (

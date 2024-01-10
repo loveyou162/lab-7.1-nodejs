@@ -9,7 +9,7 @@ const Header = () => {
           <li>
             <NavLink
               className={classes["main-header__item-link"]}
-              activeClassName={classes.active}
+              activeclassname={classes.active}
               to="/"
               end
             >
@@ -19,8 +19,8 @@ const Header = () => {
           <li>
             <NavLink
               className={classes["main-header__item-link"]}
-              activeClassName={classes.active}
-              to="/b"
+              activeclassname={classes.active}
+              to="/product-list"
             >
               Products
             </NavLink>
@@ -28,8 +28,8 @@ const Header = () => {
           <li>
             <NavLink
               className={classes["main-header__item-link"]}
-              activeClassName={classes.active}
-              to="/c"
+              activeclassname={classes.active}
+              to="/cart"
             >
               Cart
             </NavLink>
@@ -37,7 +37,7 @@ const Header = () => {
           <li>
             <NavLink
               className={classes["main-header__item-link"]}
-              activeClassName={classes.active}
+              activeclassname={classes.active}
               to="/d"
             >
               Orders
@@ -46,7 +46,7 @@ const Header = () => {
           <li>
             <NavLink
               className={classes["main-header__item-link"]}
-              activeClassName={classes.active}
+              activeclassname={classes.active}
               to="/add-product"
             >
               Add Product
@@ -55,7 +55,7 @@ const Header = () => {
           <li>
             <NavLink
               className={classes["main-header__item-link"]}
-              activeClassName={classes.active}
+              activeclassname={classes.active}
               to="/e"
             >
               Admin Products

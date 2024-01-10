@@ -6,10 +6,11 @@ exports.getAddProduct = (req, res, next) => {
   });
 };
 exports.postAddProduct = (req, res, next) => {
-  const { title, img, price, des } = req.body;
-
-  Product.createProduct({ title, img, price, des }, (newProduct) => {
-    console.log("Sản phẩm đã được tạo:", newProduct);
-    res.json(newProduct);
-  });
+  const { title, img, price, des, id } = req.body;
+  const product = new Product(title, img, price, des, id);
+  product.save();
+  res.json(product);
+  // Product.createProduct({ title, img, price, des }, (newProduct) => {
+  //   console.log("Sản phẩm đã được tạo:", newProduct);
+  // });
 };

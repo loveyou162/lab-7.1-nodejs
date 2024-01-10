@@ -1,10 +1,10 @@
 const express = require("express");
 const addRouter = require("./Router/AddProduct");
-// const shopRouter = require("./Router/Shop");
+const shopRouter = require("./Router/Shop");
 const app = express();
 const cors = require("cors");
 app.use(express.json());
 app.use(cors());
-app.use(addRouter.routes);
-// app.use(shopRouter);
+app.use(addRouter);
+app.use(shopRouter);
 app.listen(5000);
